@@ -25,4 +25,11 @@ public class CircularSinglyLinkedList
 		size = 0;
 	}
 	
+	//return the size of the chain
+	public int getSize()
+	{
+		
+		return size;
+	}
+	
 }
