@@ -15,6 +15,7 @@ public class CircularSinglyLinkedListDemo
 		l1.add(5);
 		
 		
+		l1.update(6);
 		
 		
 	}
