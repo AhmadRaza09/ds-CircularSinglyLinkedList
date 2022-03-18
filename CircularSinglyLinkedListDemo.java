@@ -15,7 +15,14 @@ public class CircularSinglyLinkedListDemo
 		l1.add(5);
 		l1.add(10);
 		
-		System.out.println(l1.get());
+		System.out.println("Size: " + l1.getSize());
+		
+		
+		l1.clear();
+		System.out.println("Size: " + l1.getSize());
+		
+		
+	
 		
 		
 	}

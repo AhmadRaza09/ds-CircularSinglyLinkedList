@@ -8,7 +8,7 @@ public class CircularSinglyLinkedList
 {
 	private Node head;  //store the reference of the first node in the chain
 	private Node tail;  //store the reference of the first node in the chain
-	public Node current;  //store the reference of the current node in the chain
+	private Node current;  //store the reference of the current node in the chain
 	
 	/** store the reference of the previous node with respect to the current
 	node in the chain if there is only one node in the chain then store the reference of the current node**/
@@ -77,6 +77,17 @@ public class CircularSinglyLinkedList
 		{
 			current.setValue(updateValue);
 		}
+	}
+
+	//remove all the node from the chain
+	public void clear()
+	{
+		head = null;
+		tail.setNext(null);
+		tail = null;
+		current = null;
+		lastCurrentNode = null;
+		size = 0;
 	}
 	
 	//get the value where current node piont, if current node is null then throws ListEmptyException
