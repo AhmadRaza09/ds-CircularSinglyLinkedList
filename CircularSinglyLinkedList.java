@@ -32,4 +32,42 @@ public class CircularSinglyLinkedList
 		return size;
 	}
 	
+	//add the node in the chain after the current node
+	public void add(int addValue)
+	{
+		Node newNode = new Node();
+		newNode.setValue(addValue);
+		
+		if(current == null)
+		{
+			current = newNode;
+			lastCurrentNode = current;
+			head = current;
+			tail = current;
+			current.setNext(current);
+		}
+		else
+		{
+			if(current.getNext() == head)
+			{
+				lastCurrentNode = current;
+				current = newNode;
+				lastCurrentNode.setNext(current);
+				current.setNext(head);
+				tail = current;
+			}
+			else
+			{
+				lastCurrentNode = current;
+				current = newNode;
+				current.setNext(lastCurrentNode.getNext());
+				lastCurrentNode.setNext(current);
+			}
+		}
+		
+		size = size + 1;
+		
+		
+	}
+	
 }
