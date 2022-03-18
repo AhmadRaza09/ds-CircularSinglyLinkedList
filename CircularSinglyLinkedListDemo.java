@@ -7,15 +7,15 @@
 public class CircularSinglyLinkedListDemo
 {
 	
-	public static void main(String [] args)
+	public static void main(String [] args) throws ListEmptyException
 	{
 		CircularSinglyLinkedList l1 = new CircularSinglyLinkedList();
 		l1.add(3);
 		l1.add(4);
 		l1.add(5);
+		l1.add(10);
 		
-		
-		l1.update(6);
+		System.out.println(l1.get());
 		
 		
 	}
