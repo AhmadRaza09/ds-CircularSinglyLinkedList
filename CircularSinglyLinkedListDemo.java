@@ -19,6 +19,16 @@ public class CircularSinglyLinkedListDemo
 		
 		System.out.println("Through Current");
 		System.out.println(l1.get());
+		l1.next();
+		System.out.println(l1.get());
+		l1.next();
+		System.out.println(l1.get());
+		l1.next();
+		System.out.println(l1.get());
+		l1.next();
+		System.out.println(l1.get());
+		l1.next();
+		System.out.println(l1.get());
 	
 
 		
