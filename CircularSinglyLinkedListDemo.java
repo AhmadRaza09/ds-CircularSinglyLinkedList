@@ -14,12 +14,19 @@ public class CircularSinglyLinkedListDemo
 		l1.add(3);
 		l1.add(4);
 		l1.add(8);
-		l1.back();
-		l1.back();
-		l1.back();
+		l1.add(12);
+		l1.add(40);
+		l1.add(85);
+		l1.add(124);
 		
-		System.out.println("Through Current");
-		System.out.println(l1.get());
+		if(l1.find(85))
+		{
+			System.out.println(l1.get());
+		}
+		else
+		{
+			System.out.println("Not found");
+		}
 		
 	
 

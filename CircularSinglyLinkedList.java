@@ -70,6 +70,31 @@ public class CircularSinglyLinkedList
 		
 	}
 	
+	//find the value if find then point current to that node
+	public boolean find(int findValue)
+	{
+		//for set current and lastCurrentNode
+		Node temp = head;
+		Node tempPrev = head;
+		
+		for(int i = 1; i <= size - 1; i++)
+		{
+			
+			if(temp.getValue() == findValue)
+			{
+				lastCurrentNode = tempPrev;
+				current = temp;
+				return true;
+			
+			}
+			tempPrev = temp;
+			temp = temp.getNext();
+		}
+		
+		return false;	
+		
+	}
+	
 	//update the value on which current node refer
 	public void update(int updateValue)
 	{
