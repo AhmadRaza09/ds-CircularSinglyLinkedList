@@ -106,4 +106,13 @@ public class CircularSinglyLinkedList
 	}
 	
 	
+	//traversing list operation
+	
+	//piont the current to the head
+	public void start()
+	{
+		current = head;
+		lastCurrentNode = head;
+	}
+	
 }
