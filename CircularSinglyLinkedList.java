@@ -178,16 +178,13 @@ public class CircularSinglyLinkedList
 		
 		for(int i = 1; i <= size - 1; i++)
 		{
-			System.out.println("for");
 			if(lastCurrentNode != current)
 			{
-				System.out.println("yes");
 				temp = lastCurrentNode;
 				lastCurrentNode = lastCurrentNode.getNext();
 			}
 			else
 			{
-				System.out.println("no");
 				lastCurrentNode = temp;
 				return;
 			}
