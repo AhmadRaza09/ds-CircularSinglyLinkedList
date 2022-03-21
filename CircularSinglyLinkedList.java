@@ -70,6 +70,68 @@ public class CircularSinglyLinkedList
 		
 	}
 	
+	//remove the current node from the chain
+	public void remove()
+	{
+			//if list is empty then nothing to do
+			if(current != null)
+			{
+				//if size is 1 then is mean only one nonde in chain so set all refrences to null
+				if(size == 1)
+				{
+					current = null;
+					head = null;
+					tail.setNext(null);
+					tail = null;
+					lastCurrentNode = null;
+				}
+				else
+				{
+					//if the removal of the current node is the last element of chain then tail refrence also need to be changed
+					if(current.getNext() == head)
+					{
+						tail = lastCurrentNode;
+						
+					}
+					
+					//remove the current node
+				
+					//if the current node is first node
+					if(current == lastCurrentNode)
+					{
+						current = current.getNext();
+						lastCurrentNode = current;
+						head = current;
+						tail.setNext(head);
+						
+					}
+					else
+					{
+						
+						lastCurrentNode.setNext(current.getNext());
+						current = lastCurrentNode;
+						
+						//change the refrence of the lastCurrentNode
+						Node temp = head;
+						Node prev = head;
+						
+						while(temp != lastCurrentNode)
+						{
+							prev = temp;
+							temp = temp.getNext();
+						}
+						lastCurrentNode = prev;
+						
+					}
+					
+					
+				}
+				
+				//decrease chain size;
+				size = size - 1;
+			}
+	}
+	
 	//find the value if find then point current to that node
 	public boolean find(int findValue)
 	{
@@ -166,21 +228,25 @@ public class CircularSinglyLinkedList
 		Node temp = head;
 		lastCurrentNode = head;
 		
-		for(int i = 1; i <= size - 1; i++)
+		for(int i = 1; i <= size; i++)
 		{
 			
 			if(lastCurrentNode != current)
 			{
+				
 				temp = lastCurrentNode;
 				lastCurrentNode = lastCurrentNode.getNext();
 			}
 			else
 			{
+			
 				lastCurrentNode = temp;
 				return;
 			}
-		}
 			
+		}
+		
+	
 		
 	}
 	
@@ -199,9 +265,8 @@ public class CircularSinglyLinkedList
 		//change lastCurrentNode
 		Node temp = head;
 		lastCurrentNode = head;
-		System.out.println("Size: " + getSize());
 		
-		for(int i = 1; i <= size - 1; i++)
+		for(int i = 1; i <= size; i++)
 		{
 			if(lastCurrentNode != current)
 			{

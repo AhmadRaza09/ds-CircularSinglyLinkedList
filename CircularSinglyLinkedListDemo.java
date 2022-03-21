@@ -11,22 +11,45 @@ public class CircularSinglyLinkedListDemo
 	{
 		CircularSinglyLinkedList l1 = new CircularSinglyLinkedList();
 		
+		
+		l1.add(1);
+		l1.add(2);
 		l1.add(3);
 		l1.add(4);
+		l1.add(5);
+		l1.add(6);
+		l1.add(7);
 		l1.add(8);
-		l1.add(12);
-		l1.add(40);
-		l1.add(85);
-		l1.add(124);
+		l1.add(9);
+		l1.add(10);
 		
-		if(l1.find(85))
+		l1.tail();
+		l1.remove();
+		System.out.println("after: " + l1.get());
+		l1.remove();
+		System.out.println("after: " + l1.get());
+		l1.remove();
+		l1.start();
+		System.out.println("after: " + l1.get());
+		System.out.println("Remove");
+		for(int i = 1; i <= l1.getSize(); i++)
 		{
-			System.out.println(l1.get());
+			
+			System.out.print(l1.get());
+			if(i < l1.getSize())
+			{
+				System.out.print("->");
+			}
+			l1.next();
 		}
-		else
-		{
-			System.out.println("Not found");
-		}
+		
+		System.out.println();
+		
+		
+		
+		
+		
+		
 		
 	
 
