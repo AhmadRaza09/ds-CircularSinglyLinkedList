@@ -82,12 +82,15 @@ public class CircularSinglyLinkedList
 	//remove all the node from the chain
 	public void clear()
 	{
-		head = null;
-		tail.setNext(null);
-		tail = null;
-		current = null;
-		lastCurrentNode = null;
-		size = 0;
+		if(current != null)
+		{
+			head = null;
+			tail.setNext(null);
+			tail = null;
+			current = null;
+			lastCurrentNode = null;
+			size = 0;
+		}
 	}
 	
 	//get the value where current node piont, if current node is null then throws ListEmptyException

@@ -10,16 +10,8 @@ public class CircularSinglyLinkedListDemo
 	public static void main(String [] args) throws ListEmptyException
 	{
 		CircularSinglyLinkedList l1 = new CircularSinglyLinkedList();
-		l1.add(3);
-		l1.add(4);
-		l1.add(5);
-		l1.add(10);
-		
-		System.out.println("Size: " + l1.getSize());
-		
-		
+		System.out.println("HI");
 		l1.clear();
-		System.out.println("Size: " + l1.getSize());
 		
 		
 	
