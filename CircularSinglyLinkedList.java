@@ -141,7 +141,7 @@ public class CircularSinglyLinkedList
 		Node temp = head;
 		lastCurrentNode = head;
 		
-		for(int i = 1; i < size - 1; i++)
+		for(int i = 1; i <= size - 1; i++)
 		{
 			
 			if(lastCurrentNode != current)
@@ -164,6 +164,35 @@ public class CircularSinglyLinkedList
 	{
 		current = head;
 		lastCurrentNode = head;
+	}
+	
+	//piont current to the previous node in the chain
+	public void back()
+	{
+		current = lastCurrentNode;
+		
+		//change lastCurrentNode
+		Node temp = head;
+		lastCurrentNode = head;
+		System.out.println("Size: " + getSize());
+		
+		for(int i = 1; i <= size - 1; i++)
+		{
+			System.out.println("for");
+			if(lastCurrentNode != current)
+			{
+				System.out.println("yes");
+				temp = lastCurrentNode;
+				lastCurrentNode = lastCurrentNode.getNext();
+			}
+			else
+			{
+				System.out.println("no");
+				lastCurrentNode = temp;
+				return;
+			}
+		}
+		
 	}
 	
 }
