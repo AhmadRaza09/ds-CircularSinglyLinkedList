@@ -114,7 +114,7 @@ public class CircularSinglyLinkedList
 			
 		if(head != null)
 		{
-			//if current is connected to the next node then return true
+			//if current next is connected to head
 			if(current.getNext() == head)
 			{
 				lastCurrentNode = head;
@@ -130,6 +130,33 @@ public class CircularSinglyLinkedList
 	
 		//if current is not connected to the next node then return false
 		return false;
+	}
+	
+	//point the current to the tail
+	public void tail()
+	{
+		current = tail;
+		
+		//change lastCurrentNode
+		Node temp = head;
+		lastCurrentNode = head;
+		
+		for(int i = 1; i < size - 1; i++)
+		{
+			
+			if(lastCurrentNode != current)
+			{
+				temp = lastCurrentNode;
+				lastCurrentNode = lastCurrentNode.getNext();
+			}
+			else
+			{
+				lastCurrentNode = temp;
+				return;
+			}
+		}
+			
+		
 	}
 	
 	//piont the current to the head
